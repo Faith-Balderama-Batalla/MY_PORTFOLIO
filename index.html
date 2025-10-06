@@ -5,40 +5,19 @@
     <title>Portfolio</title>
     <style>
         body {
-            font-family: Georgia, 'Times New Roman', Times, serif;
-            background-color: aliceblue;
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
             line-height: 1.5;
         }
-        .container{
-            max-width: 1000px;
-            margin: auto;
-            background: fixed;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 1, 1);
+        a{
+            color: #ffffff;
+            text-decoration: none;
         }
-        .header {
-            text-align: center;
-        }
-        .profile-img{
-            width: 150px;
-            height: 150px;
-            border-radius: 25%;
-            object-fit: cover;
-            margin-bottom: 10px;
-        }
-        h1 {
-            color: black;
-            margin-bottom: 5px;
-        }
-        h2{
-            border-bottom: 2px solid black;
-            padding-bottom: 5px;
-            margin-top: 20px;
-            color: navy;
-        }
-        p{
-            font-size: 16px;
+        a:hover{
+            text-decoration: underline;
         }
         ul{
             list-style-type:disc;
@@ -47,53 +26,161 @@
             margin: 5px 0;
         }
 
+        header {
+            background: #0077b6;
+            color: white;
+            text-align: center;
+            padding: 2rem 1rem;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        header p{
+            margin: 0.5rem 0 0;
+            font-size: 14px;
+        }
+        .header-content {
+            display: flex;
+            align-items: center; 
+            justify-content: center; 
+            gap: 1.5rem; 
+            text-align: left; 
+        }
+        .profile-img {
+            width: 100px;
+            height: 100px;
+            border-radius: 25%;
+            object-fit: cover;
+            border: 3px solid #0077b6;
+        }
+
+        .container{
+            width: 90%;
+            max-width: 1000px;
+            margin: 2rem auto;
+        }
+
+        section {
+            margin-bottom: 2rem;
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        }
+        section h2{
+            border-bottom: 2px solid black;
+            padding-bottom: 0.3rem;
+            margin-bottom: 20px;
+            color: navy;
+        }
+        
+        .flex {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        .flex .item{
+            flex: 1 1 45%;
+            background: #f1faff;
+            padding: 1rem;
+            border-radius: 6px;
+        }
+
+        footer{
+            text-align: center;
+            padding: 1rem;
+            background: #0077b6;
+            color: white;
+            margin-top: 2rem;
+        }
     </style>
 </head>
 <body>
-    <div class = "container">
-
-        <div class = "header">
-            <img src="profile.jpg" alt="My Profile Photo" class="profile-img">
-            <h1>FRANCHESKA FAITH B. BATALLA</h1>
-            <p>Email: <a href="mailto:batallafrancheskafaith@gmail.com">francheskafaithbalderama.batalla24@bicol-u.edu.ph</a> | Phone: 0985-084-3823</p>
+    <header>
+        <div class="header-content">
+            <img src="IMG_20250910_182902 (1).jpg" alt="My Profile Photo" class="profile-img">
+            <div>
+                <h1>FRANCHESKA FAITH B. BATALLA</h1>
+                <p>Student | Programmer</p>
+                <div class="contact">
+                    <a href="mailto:batallafrancheskafaith@gmail.com">Email</a> 
+                    <a href="https://github.com/Faith-Balderama-Batalla/MY_PORTFOLIO">Github</a>
+                    <p>Phone: 0985-084-3823</p>
+                </div>
+            </div>
         </div>
+    </header>
 
-    <h2>About Me</h2>
-    <p>Hello! My name is Francheska Faith Batalla. I am currently learning web development and practicing HTML & CSS. I am eager to learn more about creating simple but functional websites as aprt of my growth in Information Systems.</p>
+    <div class = "container">
+        <section>
+            <h2>About Me</h2>
+            <p>
+                I am currently a student at Bicol University Polangui learning web development and practicing HTML & CSS. 
+                I am eager to learn more about creating simple but functional websites as aprt of my growth in Information Systems.
+            </p>
+        </section>
 
-    <h2>Education</h2>
-    <p><b>Science, Technology, Engineering and Mathematics Strand</b><br>
-        Ligao National High School (2022 – 2024)</p>
-    <p><b>Bachelor of Science in Information Systems</b><br>
-        Bicol University (2024 – Present)</p>
+        <section>
+        <h2>Education</h2>
+        <div class="flex">
+            <div class="item">
+              <h3>Bachelor of Science in Information System</h3>
+              <p>Bicol University Polangui, 2024 - Present</p>
+            </div>
+            <div class="item">
+              <h3>High School Diploma</h3>
+              <p>Ligao National High School, 2022 - 2024</p>
+              <p>STEM Strand | With High Honor</p>
+            </div>
+        </div>
+        </section>
 
-    <h2>Experience</h2>
-    <p><b>Student Projects</b></p>
-    <ul>
-        <li>Learned Basic C++ - Bicol University Polangui (2024 - 2025)</li>
-        <li>Learned Basic FIGMA - Bicol University Polangui (2024 - 2025)</li>
-        <li>Learning Basic Python - Bicol University Polangui (2025 - 2026)</li>
-        <li>Learning Basic Html - Bicol University Polangui (2025 - 2026)</li>
-    </ul>
+        <section>
+            <h2>Experience</h2>
+            <div class="flex">
+                <div class="item">
+                    <h3>Student Projects</h3>
+                    <ul>
+                        <li>Learned Basic C++ - Bicol University Polangui (2024 - 2025)</li>
+                        <li>Learned Basic FIGMA - Bicol University Polangui (2024 - 2025)</li>
+                        <li>Learning Basic Python - Bicol University Polangui (2025 - 2026)</li>
+                        <li>Learning Basic Html - Bicol University Polangui (2025 - 2026)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
 
-    <h2><b>Skills</b></h2>
-    <ul>
-      <li>C++ Basics</li>
-      <li>HTML & CSS</li>
-      <li>Figma</li>
-    </ul>
+        <section>
+            <div class="flex">
+                <div class="item">             
+                    <h2>Skills</h2>
+                    <ul>
+                      <li>C++ Basics</li>
+                      <li>HTML & CSS</li>
+                      <li>Python Basics</li>
+                      <li>Figma</li>
+                    </ul>
+                </div>
 
-    <h2><b>Interests</b></h2>
-    <ul>
-      <li>Web Development</li>
-      <li>Roadtrips</li>
-      <li>Eating</li>
-      <li>Reading</li>
-      <li>Watching Series and Movies</li>
-      <li>Listening to Music</li>
-    </ul>
-
-
+                <div class="item">  
+                    <h2>Interests</h2>
+                    <ul>
+                      <li>Web Development</li>
+                      <li>Roadtrips</li>
+                      <li>Eating</li>
+                      <li>Reading</li>
+                      <li>Watching Series and Movies</li>
+                      <li>Listening to Music</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
     </div>  
+
+    <footer>
+        <p>© 2025 Francheska Faith Batalla. All Rights Reserved.</p>
+    </footer>
+
 </body>
 </html>
